@@ -11,7 +11,7 @@ pipeline {
             }
         }
 
-        stage (Test') {
+        stage ('Test') {
 
             steps {
                 withMaven(maven : 'maven_3_5_0') {
