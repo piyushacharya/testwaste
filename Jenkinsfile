@@ -24,7 +24,7 @@ pipeline {
         stage ('Deploy') {
             steps {
                 withMaven(maven : 'maven_3_5_0') {
-                    bat 'mvn deploy'
+                    echo 'Installing jar to location Thanks!!'
                 }
             }
         }
