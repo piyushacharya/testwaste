@@ -11,8 +11,9 @@ import java.util.HashMap;
 public class StartService {
     public static void main(String[] args) {
         Object[] sources = new Object[2];
-        sources[0] = PipelineInfoController.class;
         sources[1] = StartService.class;
+
+        sources[0] = PipelineInfoController.class;
 
 
         HashMap<String, Object> props = new HashMap<String,Object>();
