@@ -25,7 +25,7 @@ pipeline {
                 withMaven(maven : 'maven_3_5_0') {
                     echo 'Installing jar to location Thanks!!'
                     bat 'docker build -t an_example .'
-                    echo '--------------------------'
+                    echo 'sample'
                 }
             }
         }
