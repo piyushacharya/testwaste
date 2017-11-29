@@ -25,6 +25,7 @@ pipeline {
                 withMaven(maven : 'maven_3_5_0') {
                     echo 'Installing jar to location Thanks!!'
                     echo '%cd%'
+                    echo '--------------------------'
                 }
             }
         }
