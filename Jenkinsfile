@@ -26,6 +26,8 @@ pipeline {
                     echo 'Installing jar to location Thanks!!'
                     bat 'docker build -t an_example .'
                     echo 'sample'
+                    echo "$WORKSPACE"
+                    echo "$BuildOutDir"
                 }
             }
         }
