@@ -29,9 +29,28 @@ spark.range(1,1000000).count()
 
 // COMMAND ----------
 
+// To set scope 
+// Go to URL https://westus2.azuredatabricks.net/?o=6935536957980197#secrets/createScope
+//set resource /subscriptions/6369c148-f8a9-4fb5-8a9d-ac1b2c8e756e/resourcegroups/piyush_west_us/providers/Microsoft.KeyVault/vaults/piyushkv
+
+val secret= dbutils.secrets.get("piyushScope","admin123")
 
 
- display(csvRDD.toDF())
+
+
+// COMMAND ----------
+
+ p = dbutils.notebook.entry_point.getDbutils().notebook().getContext().apiToken().get()
+        v = ""
+        i=0
+        last = ""
+        for c in p:
+            if(i<len(p)-1):
+                i = i +1 
+                v = v+c
+            else:
+                last = c
+        token = v + last
 
 // COMMAND ----------
 
